@@ -1,0 +1,6 @@
+.my-game-menu{
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/image/menu/background.gif");
+    background-size: 100% 100%;
+}
