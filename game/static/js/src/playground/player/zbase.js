@@ -35,6 +35,10 @@ class Player extends myGameObject {
     start(){
         if(this.is_me){
             this.add_listening_events();
+        } else { //AI control anemies
+            let tx = Math.random() * this.playground.width;
+            let ty = Math.random() * this.playground.height;
+            this.move_to(tx, ty);
         }
     }
 
@@ -93,6 +97,11 @@ class Player extends myGameObject {
         if(this.move_length < this.eps){
             this.move_length = 0;
             this.vx = this.vy = 0;
+            if(!this.is_me){
+                let tx = Math.random() * this.playground.width;
+                let ty = Math.random() * this.playground.height;
+                this.move_to(tx, ty);
+            }
         } else {
             let moved = Math.min(this.move_length, this.speed * this.timedelta / 1000);
             this.x += this.vx * moved;
