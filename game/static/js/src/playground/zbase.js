@@ -14,7 +14,9 @@ class gamePlayground {
     }
 
     start() {
-
+        for(const player of this.players){
+            player.start();
+        }
     }
 
     show() {

@@ -17,7 +17,7 @@ class GameMap extends myGameObject {
     }
 
     render(){
-        this.ctx.fillStyle = "rgb(209, 239, 239, 255)";
+        this.ctx.fillStyle = "rgb(209, 239, 239, 0.4)";
         this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     }
 }
