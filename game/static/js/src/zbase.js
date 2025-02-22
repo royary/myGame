@@ -1,0 +1,4 @@
+class MyGame {
+    constructor(id){
+    }
+}

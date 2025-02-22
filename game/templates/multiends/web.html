@@ -1,0 +1,26 @@
+{% load static %}
+
+<head>
+    <!-- jQuery (required by jQuery UI) -->
+         <!--CSS: JavaScript: Adds interactive behavior (like button clicks, animations, and form validation).-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  
+    <!-- jQuery UI (CSS) -->
+     <!--CSS: Adds styles (like colors, fonts, and spacing) to make the page look good.-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="{% static 'css/game.css' %}">
+    <script src="{% static 'js/dist/game.js' %}"></script>
+
+</head>
+
+<!-- 所有的用户交互处理由前端完成，而不是重新请求服务器, 前端通过 MyGame 负责将游戏画面插入页面中，并控制整个交互过程 -->
+<body style="margin: 0">
+    <div id="my_game_123"></div>
+    <script>
+        $(document).ready(function(){
+            let my_game = new MyGame("my_game_123");
+        })
+    </script>
+</body>
+  
